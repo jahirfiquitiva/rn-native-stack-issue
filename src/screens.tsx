@@ -25,6 +25,14 @@ export function DetailsScreen() {
   );
 }
 
+export function SettingsScreen() {
+  return (
+    <View style={style.container}>
+      <Text>Settings Screen</Text>
+    </View>
+  );
+}
+
 const style = StyleSheet.create({
   container: {
     flex: 1,
