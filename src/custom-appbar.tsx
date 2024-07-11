@@ -3,6 +3,7 @@ import {Appbar} from 'react-native-paper';
 import {getHeaderTitle} from '@react-navigation/elements';
 import type {StackHeaderProps} from '@react-navigation/stack';
 import type {BottomTabHeaderProps} from '@react-navigation/bottom-tabs';
+import type {NativeStackHeaderProps} from '@react-navigation/native-stack';
 
 export default function CustomNavigationBar({
   navigation,
@@ -10,7 +11,7 @@ export default function CustomNavigationBar({
   options,
   // back,
   ...props
-}: StackHeaderProps | BottomTabHeaderProps) {
+}: StackHeaderProps | BottomTabHeaderProps | NativeStackHeaderProps) {
   const title = getHeaderTitle(options, route.name);
 
   return (

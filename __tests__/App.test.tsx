@@ -8,7 +8,6 @@ test('Shows home screen', () => {
 
   expect(screen.getByText('Home')).toBeOnTheScreen();
 
-  expect(screen.getByText('Right')).toBeOnTheScreen();
-
   screen.debug();
+  expect(screen.getByText('Right')).toBeOnTheScreen();
 });
