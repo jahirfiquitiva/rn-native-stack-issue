@@ -5,9 +5,7 @@ import App from './../App';
 
 test('Shows home screen', () => {
   render(<App />);
-
   expect(screen.getByText('Home')).toBeOnTheScreen();
-
   screen.debug();
   expect(screen.getByText('Right')).toBeOnTheScreen();
 });
