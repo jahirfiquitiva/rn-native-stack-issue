@@ -15,6 +15,9 @@ export default function CustomNavigationBar({
     <Appbar.Header>
       {back ? <Appbar.BackAction onPress={navigation.goBack} /> : null}
       <Appbar.Content title={title} />
+      {options.headerRight
+        ? options.headerRight({canGoBack: navigation.canGoBack()})
+        : null}
     </Appbar.Header>
   );
 }
