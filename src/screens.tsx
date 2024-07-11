@@ -1,10 +1,16 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
+import {Text, Button} from 'react-native-paper';
 
 export function HomeScreen() {
+  const navigation = useNavigation();
   return (
     <View style={style.container}>
       <Text>Home Screen</Text>
+      <Button mode="contained" onPress={() => navigation.navigate('Details')}>
+        Go to details
+      </Button>
     </View>
   );
 }
