@@ -8,4 +8,5 @@ test('Shows home screen', () => {
   expect(screen.getByText('Home')).toBeOnTheScreen();
   screen.debug();
   expect(screen.getByText('Right')).toBeOnTheScreen();
+  // ↑ Fails. Expected: 1 element with text. Found: 2 elements.
 });
