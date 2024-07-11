@@ -8,7 +8,9 @@ export function HomeScreen() {
   return (
     <View style={style.container}>
       <Text>Home Screen</Text>
-      <Button mode="contained" onPress={() => navigation.navigate('Details')}>
+      <Button
+        mode="contained"
+        onPress={() => navigation.navigate('Details' as never)}>
         Go to details
       </Button>
     </View>

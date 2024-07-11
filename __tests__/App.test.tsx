@@ -1,17 +1,14 @@
-/**
- * @format
- */
+import * as React from 'react';
+import '@testing-library/react-native/extend-expect';
+import {screen, render} from '@testing-library/react-native';
+import App from './../App';
 
-import 'react-native';
-import React from 'react';
-import App from '../App';
+test('Shows home screen', () => {
+  render(<App />);
 
-// Note: import explicitly to use the types shipped with jest.
-import {it} from '@jest/globals';
+  expect(screen.getByText('Home')).toBeOnTheScreen();
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+  expect(screen.getByText('Right')).toBeOnTheScreen();
 
-it('renders correctly', () => {
-  renderer.create(<App />);
+  screen.debug();
 });
